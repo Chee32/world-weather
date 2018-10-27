@@ -29,13 +29,10 @@ export class AddWeatherPage {
             city: this.city,
             country: this.country,
         };
-
-        console.log(weather);
  
         this.weatherProvider.verifyWeather(weather).subscribe((result) => {
  
             this.checkingValidity = false;
-            console.log(result);
  
             this.weatherProvider.addWeather(weather);
             this.navCtrl.pop();

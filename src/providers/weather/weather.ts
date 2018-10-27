@@ -30,13 +30,6 @@ export class WeatherProvider {
         this.saveWeather();
  
     }
-
-    setWeatherPage(weather: Weather): void {
-
-    	this.forastPage = weather;
-    	this.fetchForcast();
-    	this.saveWeatherPage();
-    }
  
     removeWeather(weather): void {
  

@@ -10,7 +10,7 @@ import { WeatherProvider } from '../../providers/weather/weather';
 export class HomePage {
  
     constructor(private navCtrl: NavController, private weatherProvider: WeatherProvider) {
- 
+
     }
  
     ionViewDidLoad(): void {
@@ -19,10 +19,6 @@ export class HomePage {
  
     addWeather(): void {
         this.navCtrl.push('AddWeatherPage');
-    }
-
-    seeWeather(weather: string[]): void {
-
     }
  
     goToCryptonator(): void {
