@@ -1,0 +1,45 @@
+<ion-header>
+ 
+  <ion-navbar color="primary">
+    <ion-title>Add City</ion-title>
+  </ion-navbar>
+ 
+</ion-header>
+ 
+ 
+<ion-content padding>
+ 
+    <div class="message">
+ 
+        <p>To add a city you will need to supply the appropriate city and counrty.  The cournty must be an  ISO 3166 country code.</p>
+ 
+    </div>
+ 
+ 
+    <ion-list>
+ 
+        <ion-item>
+            <ion-label stacked>City Name</ion-label>
+            <ion-input [(ngModel)]="city" placeholder="e.g. London, Tampa, Dallas" type="text"></ion-input>
+        </ion-item>
+ 
+        <ion-item>
+            <ion-label stacked>Country Code</ion-label>
+            <ion-input [(ngModel)]="country" placeholder="(e.g. uk, us, ca)" type="text"></ion-input>
+        </ion-item>
+ 
+    </ion-list>  
+ 
+    <button ion-button full (click)="addWeather()" [disabled]="checkingValidity">Add City <ion-spinner *ngIf="checkingValidity"></ion-spinner></button>
+ 
+    <p class="error-message" *ngIf="weatherUnavailable">Sorry, that combination is not currently available. Make sure used the correct country code.</p>
+
+    <p class="error-message" *ngIf="noConnection">Sorry, you need to be online to add new cities.</p>
+ 
+</ion-content>
+ 
+<ion-footer padding>
+ 
+    <p><strong>Note:</strong> This web application allows you to track Cities weather without creating an account. This means that all data is stored locally, and may be permanently deleted without warning.</p>
+ 
+</ion-footer>
