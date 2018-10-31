@@ -1,0 +1,31 @@
+page-forcast {
+	ion-item {
+		ul {
+			list-style: none;
+			padding: 0px;
+		}
+	}
+
+	.card-md {
+		background-color: map-get($colors, secondary);
+		.card-content {
+			background-color: map-get($colors, secondary);
+			
+			.item-md {
+				background-color: transparent;
+				color: #fff;
+			}
+		}
+	}
+
+	.forcast {
+ 
+        text-transform: uppercase;
+ 
+        .range {
+            font-size: 0.7em;
+        }
+ 
+    }
+
+}

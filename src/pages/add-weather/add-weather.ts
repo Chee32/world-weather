@@ -28,14 +28,20 @@ export class AddWeatherPage {
         let weather = {
             city: this.city,
             country: this.country,
+            forcast: []
         };
  
         this.weatherProvider.verifyWeather(weather).subscribe((result) => {
  
             this.checkingValidity = false;
- 
-            this.weatherProvider.addWeather(weather);
-            this.navCtrl.pop();
+
+            if( "" != result.base ){
+                weather.forcast = result.main;
+                this.weatherProvider.addWeather(weather);
+                this.navCtrl.pop();
+            }
+                       
+            
  
         }, (err) => {   
  			if("city not found" == err.message) {

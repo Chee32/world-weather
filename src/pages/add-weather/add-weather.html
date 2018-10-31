@@ -30,7 +30,7 @@
  
     </ion-list>  
  
-    <button ion-button full (click)="addWeather()" [disabled]="checkingValidity">Add City <ion-spinner *ngIf="checkingValidity"></ion-spinner></button>
+    <button ion-button full color="dark" (click)="addWeather()" [disabled]="checkingValidity">Add City <ion-spinner *ngIf="checkingValidity"></ion-spinner></button>
  
     <p class="error-message" *ngIf="weatherUnavailable">Sorry, that combination is not currently available. Make sure used the correct country code.</p>
 

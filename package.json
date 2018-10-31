@@ -1,8 +1,7 @@
 {
   "name": "world-weather",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "version": "1.0.0",
+  "author": "Ian Foulk",
   "private": true,
   "scripts": {
     "start": "ionic-app-scripts serve",
@@ -34,5 +33,5 @@
     "@ionic/app-scripts": "3.2.0",
     "typescript": "~2.6.2"
   },
-  "description": "An Ionic project"
+  "description": "A PWA built with ionic to show the weather of popular cities using open weather map api."
 }

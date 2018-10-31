@@ -1,3 +1,28 @@
 page-add-weather {
+	.list-md {
+		.item-input:last-child {
+			border-bottom: none !important;
+			box-shadow: none !important;
+		}
+	}
 
+	.list-md {
+		.item-block:last-child {
+			.item-inner {
+				border-bottom: 1px solid #dedede;
+			}
+		}
+	}
+
+	.item-md {
+		padding-right: 16px;
+	}
+
+	.item-md.input-has-focus {
+		.item-inner {
+			border-bottom-color:  map-get($colors, primary) !important;
+			-webkit-box-shadow: inset 0 -1px 0 0  map-get($colors, primary) !important;
+			box-shadow: inset 0 -1px 0 0  map-get($colors, primary) !important;
+		}
+	}
 }

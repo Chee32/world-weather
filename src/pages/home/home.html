@@ -32,11 +32,11 @@
     <ion-list no-lines>
  
         <ion-item-sliding *ngFor="let weather of weatherProvider.weathers">
- 
-          <ion-item class="weather">
+
+          <ion-item class="weather" (click)="seeForcast(weather.city,weather.country,weather.forcast)">
             <p><strong>{{weather.city}},{{weather.country | uppercase}}</strong></p>
             <p class="temp"><strong>Temperature:</strong> {{weather.forcast.temp}} <strong>F</strong></p>
-            <p class="range">max: {{weather.forcast.temp_max}}, min: {{weather.forcast.temp_min}}</p>
+            <p class="range">max: {{weather.forcast.temp_max}}<strong>F</strong>, min: {{weather.forcast.temp_min}}<strong>F</strong></p>
           </ion-item>
  
           <ion-item-options>

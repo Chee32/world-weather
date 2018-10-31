@@ -1,3 +1,28 @@
 page-home {
+	.content-md {
+		.scroll-content {
+			background-color: map-get($colors, secondary);
+		}
+	}
+
+    ion-footer {
+        font-size: 0.7em;
+        color: #474747;
+    }
+ 
+    ion-item-sliding {
+        margin-top: 10px;
+    }
+ 
+    .weather {
+ 
+        background-color: map-get($colors, light);
+        text-transform: uppercase;
+ 
+        .range {
+            font-size: 0.7em;
+        }
+ 
+    }
 
 }

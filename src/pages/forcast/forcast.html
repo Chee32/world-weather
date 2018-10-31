@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title class="text-capitalize">
+      Daily Forcast
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  
+    <div class="message" *ngIf="!weatherProvider.forcastList">
+ 
+        <p>The forcast for this city has not been loaded.  Please make sure you are online.</p>
+
+    </div>
+ 
+    <ion-refresher *ngIf="weatherProvider.forcastList" (ionRefresh)="refreshForcast($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+
+    <ion-card>
+    	<ion-card-content>
+			<ion-item no-lines text-center>
+	    		{{weatherProvider.forcastLocation.city}}, {{weatherProvider.forcastLocation.country | uppercase}}
+	    	</ion-item>
+
+	  		<ion-item no-lines text-center>
+	    		{{weatherProvider.forcastLocation.forcast.temp | number:0}}<strong>F</strong>
+	    	</ion-item>
+
+	    	<ion-item no-lines text-center>
+	    		<ul>
+	    			<li>Max Temp: {{weatherProvider.forcastLocation.forcast.temp_max | number:0}}<strong>F</strong></li>
+	    			<li>Min Temp: {{weatherProvider.forcastLocation.forcast.temp_min | number:0}}<strong>F</strong></li>
+	    			<li>Humidity: {{weatherProvider.forcastLocation.forcast.humidity | number:0}}<strong>%</strong></li>
+	    			<li>Pressure: {{weatherProvider.forcastLocation.forcast.pressure | number:0}}mb</li>
+	    		</ul>
+	    	</ion-item>
+	    </ion-card-content>
+	</ion-card>
+
+    <ion-list no-lines>
+ 
+        <ion-item *ngFor="let forcast of weatherProvider.forcastList">
+
+          <div class="forcast">
+            <p class="temp"><strong>Temperature:</strong> {{forcast.main.temp}}<strong>F</strong></p>
+            <p class="range">max: {{forcast.main.temp_max}}<strong>F</strong>, min: {{forcast.main.temp_min}}<strong>F</strong></p>
+          </div>
+ 
+        </ion-item>
+ 
+    </ion-list>
+
+
+</ion-content>
