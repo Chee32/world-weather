@@ -25,12 +25,13 @@
     "@ionic/storage": "2.2.0",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
+    "lodash": "^4.17.14",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.26"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "3.2.0",
+    "@ionic/app-scripts": "^3.2.4",
     "typescript": "~2.6.2"
   },
   "description": "A PWA built with ionic to show the weather of popular cities using open weather map api."
